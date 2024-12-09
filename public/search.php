@@ -16,6 +16,8 @@ $index = $client->index('comics');
 
 $query = trim($_GET['query'] ?? '');
 
+$limit = 15;
+
 $offset = $_GET['offset'] ?? 0;
 $offset = (int) $offset;
 
@@ -23,7 +25,7 @@ $semantic_ratio = $_GET['semantic_ratio'] ?? 0;
 $semantic_ratio = $semantic_ratio > 0 ? $semantic_ratio / 100 : 0;
 
 $response = $index->search($query, [
-    'limit' => 15,
+    'limit' => $limit,
     'offset' => $offset,
     'attributesToHighlight' => ['title'],
     'highlightPreTag' => '<span class="bg-accent text-accent-content">',
@@ -33,6 +35,8 @@ $response = $index->search($query, [
         'semanticRatio' => $semantic_ratio,
     ],
 ]);
+
+dump($response);
 
 $comics_count = $response->getHitsCount();
 $estimated_total_comics = $response->getEstimatedTotalHits();
@@ -83,7 +87,8 @@ $comics = array_map(function ($comic) {
                 </div>
                 <?php if ($comic === end($comics)): ?>
                     <div
-                        hx-get="/search.php?query=<?= $query ?>&offset=<?= $offset + 10 ?>"
+                        hx-get="/search.php?offset=<?= $offset + 10 ?>"
+                        hx-include="[name=query], [name=semantic_ratio]"
                         hx-trigger="revealed"
                         hx-select="#grid > div"
                         hx-target="#grid"
