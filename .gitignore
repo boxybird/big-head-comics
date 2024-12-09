@@ -1,0 +1,6 @@
+.idea
+.env
+comics.json
+vendor
+public/config.php
+public/seed.php
