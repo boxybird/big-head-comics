@@ -36,8 +36,6 @@ $response = $index->search($query, [
     ],
 ]);
 
-dump($response);
-
 $comics_count = $response->getHitsCount();
 $estimated_total_comics = $response->getEstimatedTotalHits();
 
