@@ -5,3 +5,5 @@ A Meilisearch project to stuff as many CDNs in your head as possible while still
 ## Site
 
 https://bigheadcomics.andrewrhyand.com
+
+![screenshot of bigheadcomics.andrewrhyand.com](https://bigheadcomics.andrewrhyand.com/screenshot.png)
