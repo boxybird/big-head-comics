@@ -85,7 +85,7 @@
             <div class="drawer drawer-end lg:drawer-open">
                 <input id="drawer" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content px-4 lg:px-8">
-                    <div class="navbar bg-base-300 max-w-4xl mt-8 mx-auto rounded-box shadow">
+                    <div class="navbar bg-base-300 max-w-4xl mt-4 mx-auto rounded-box shadow lg:mt-12">
                         <div class="navbar-start"></div>
                         <div class="navbar-center">
                             <a class="btn btn-ghost text-xl" href="/">Big &lt;/Head&gt; Comics</a>
