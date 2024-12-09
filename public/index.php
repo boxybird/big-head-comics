@@ -85,8 +85,7 @@
             <div class="drawer drawer-end lg:drawer-open">
                 <input id="drawer" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content px-4 lg:px-8">
-                    <!-- Page content -->
-                    <div class="navbar bg-base-300 max-w-3xl mt-8 mx-auto rounded-box shadow">
+                    <div class="navbar bg-base-300 max-w-4xl mt-8 mx-auto rounded-box shadow">
                         <div class="navbar-start"></div>
                         <div class="navbar-center">
                             <a class="btn btn-ghost text-xl" href="/">Big &lt;/Head&gt; Comics</a>
@@ -104,8 +103,8 @@
                         hx-target="#results"
                         hx-swap="innerHTML"
                         hx-indicator="#loader"
-                        class="max-w-3xl mx-auto">
-                        <div class="gap-x-8 gap-y-3 flex flex-col mt-16 sm:flex-row">
+                        class="gap-x-16 gap-y-8 flex flex-col items-end justify-between max-w-3xl mt-8 mx-auto sm:flex-row">
+                        <div class="gap-x-8 gap-y-3 flex flex-1 flex-col w-full sm:flex-row">
                             <label class="form-control flex-1 w-full">
                                 <div class="label">
                                     <span class="label-text">Comic Query</span>
@@ -120,7 +119,7 @@
                                 <div class="flex w-full justify-between px-2 text-xs"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div>
                             </label>
                         </div>
-                        <button class="btn btn-primary w-full mt-6">Search</button>
+                        <button class="btn btn-lg btn-primary w-full sm:w-auto">Search</button>
                     </form>
                     <div class="relative">
                         <div id="loader" class="htmx-indicator absolute flex inset-0 justify-center w-full">
