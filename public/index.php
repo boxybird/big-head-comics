@@ -100,26 +100,27 @@
                     </div>
                     <form
                         hx-get="/search.php"
+                        hx-trigger="submit, keyup changed delay:300ms"
                         hx-target="#results"
                         hx-swap="innerHTML"
                         hx-indicator="#loader"
-                        class="gap-x-16 gap-y-8 flex flex-col items-end justify-between max-w-3xl mt-8 mx-auto sm:flex-row">
+                        class="gap-x-8 gap-y-8 flex flex-col items-end justify-between max-w-3xl mt-8 mx-auto sm:flex-row">
                         <div class="gap-x-8 gap-y-3 flex flex-1 flex-col w-full sm:flex-row">
                             <label class="form-control flex-1 w-full">
                                 <div class="label">
                                     <span class="label-text">Comic Query</span>
                                 </div>
-                                <input type="text" name="query" class="input input-bordered" value="<?= $_GET['query'] ?? '' ?>" placeholder="Search..." required autofocus/>
+                                <input type="text" name="query" class="input input-bordered" value="<?= $_GET['query'] ?? '' ?>" placeholder="Search..." required autofocus />
                             </label>
-                            <label class="form-control w-full sm:w-52">
+                            <!-- <label class="form-control w-full sm:w-52">
                                 <div class="label">
                                     <span class="label-text">Semantic Ratio: <span x-text="`${semanticRatio}%`" class="font-bold"></span></span>
                                 </div>
-                                <input x-model="semanticRatio" type="range" name="semantic_ratio" min="0" max="100" step="25" value="0" class="range range-sm mt-2"/>
-                                <div class="flex w-full justify-between px-2 text-xs"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div>
+                                <input x-model="semanticRatio" type="range" name="semantic_ratio" min="0" max="100" step="25" value="0" class="range range-sm mt-2" />
+                                <div class="flex w-full justify-between px-2 text-xs"><span>|</span><span>|</span><span>|</span><span>|</span><span>|</span></div> -->
                             </label>
                         </div>
-                        <button class="btn btn-lg btn-primary w-full sm:w-auto">Search</button>
+                        <button class="btn _btn-lg btn-primary w-full sm:w-auto">Search</button>
                     </form>
                     <div class="relative">
                         <div id="loader" class="htmx-indicator absolute flex inset-0 justify-center w-full">
