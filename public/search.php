@@ -27,6 +27,7 @@ $semantic_ratio = $semantic_ratio > 0 ? $semantic_ratio / 100 : 0;
 $response = $index->search($query, [
     'limit' => $limit,
     'offset' => $offset,
+    'matchingStrategy' => 'frequency',
     'attributesToHighlight' => ['title'],
     'highlightPreTag' => '<span class="bg-accent text-accent-content">',
     'highlightPostTag' => '</span>',
