@@ -31,10 +31,10 @@ $response = $index->search($query, [
     'attributesToHighlight' => ['title'],
     'highlightPreTag' => '<span class="bg-accent text-accent-content">',
     'highlightPostTag' => '</span>',
-    'hybrid' => [
-        'embedder' => 'openai',
-        'semanticRatio' => $semantic_ratio,
-    ],
+//    'hybrid' => [
+//        'embedder' => 'openai',
+//        'semanticRatio' => $semantic_ratio,
+//    ],
 ]);
 
 $comics_count = $response->getHitsCount();
